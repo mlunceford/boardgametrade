@@ -1,0 +1,49 @@
+@import 'reset';
+@import './components/var';
+
+
+body{
+    font-family: $font;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    background: $green;
+    color: black;
+    font-size: 21px;
+    height: 35px;
+    transition-duration: 1s;
+    font-family: $font;
+
+}
+button:hover{
+    cursor: pointer;
+    background: $hover;
+    font-family: $font;
+    
+}
+input{
+    background: $green;
+    color: black;
+    border-radius: 10px;
+    border: solid grey;
+    font-size: 25px;
+    font-family: $font;
+    width: 300px;
+}
+textarea{
+    background: $green;
+    color: black;
+    border-radius: 10px;
+    border: solid grey;
+    font-size: 25px;   
+    font-family: $font;
+    width: 300px;
+
+
+}
+::placeholder{
+    text-decoration: underline;
+    font-family: $font;
+    color: white;
+}

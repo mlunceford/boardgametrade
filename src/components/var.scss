@@ -1,0 +1,17 @@
+//variables
+$grey: rgb(98, 102, 101);
+$green:#53917E;
+$black: rgb(54, 51, 52);
+$font: 'Oswald', sans-serif;;
+$hover:  #89609E;
+
+//mixins
+@mixin flex($display, $justify, $align, $direction){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
+

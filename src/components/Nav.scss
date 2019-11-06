@@ -1,0 +1,24 @@
+@import 'var';
+.Nav {
+    background: $grey;
+    height: 10vh;
+    box-sizing: border-box;
+    padding: 0 5px;
+    @include flex(flex, space-between, center, row)
+}
+.navImg{
+    background:$green;
+    max-width: 8vh;
+    border-radius: 5px;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+// .navBox{
+//     width: 50vw;
+//     @include flex(flex, space-around, center, ro)
+// }
+.navImg:hover{
+background: $hover;
+}
