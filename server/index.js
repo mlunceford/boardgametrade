@@ -27,6 +27,7 @@ app.use(session({
 
 //todo db endpoints
 app.get('/api/trade', tradeCtrl.getTrades)
+app.post('/api/trade', tradeCtrl.addTrade)
 // auth endpoints
 app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)

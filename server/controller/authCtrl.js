@@ -39,6 +39,9 @@ module.exports = { //!register works hitting both status codes
     logout: (req, res) => {
         req.session.destroy()
         res.sendStatus(200)
+        //? this makes it clear history cant hit back to get back into w/e
+        // localStorage.clear();   
+        // window.loaction.href = '/'
     },
     // getUser: (req, res) => {
     //     if(req.session.user){

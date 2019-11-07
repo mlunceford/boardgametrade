@@ -1,0 +1,27 @@
+@import 'var';
+
+.listTrade {
+    background: $green;
+    color: black;
+    @include flex(flex, space-between, center, column);
+    border-radius: 5px;
+    // height: 48vw; this is so it doesnt have a fixed height for the img.
+    width: 48vw;
+    border: solid grey;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0;
+}
+.imgBox  {
+    width: 90%;
+    
+}
+.tradeImg{
+    width: 100%;
+    border-radius: 10px;
+}
+.textBox{
+    @include flex(flex, space-between, center, row);
+    width: 100%;
+}
+

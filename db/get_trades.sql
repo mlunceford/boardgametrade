@@ -1,2 +1,3 @@
-select * from trade_item
-order by my_item;
+select * 
+from trade_item
+order by my_item

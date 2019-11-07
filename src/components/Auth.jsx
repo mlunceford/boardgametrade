@@ -103,4 +103,12 @@ const mapStateToProps = reduxState => { // to get state
     mapStateToProps,
     mapDispatchToProps
   )(Auth);
+
+//?alternate way of connecting redux
+// const mapStateToProps = reduxState => { // to get state
+//     const { user } = reduxState;
+//     return {
+//       user
+//     };
+//   };
 // export default connect(mapStateToProps, {updateUser} )(Auth);

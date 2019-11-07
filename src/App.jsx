@@ -15,13 +15,12 @@ class App extends React.Component{
         }
     }
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <Provider store={store}>
                 <HashRouter>
                     <div className="App">
                         <Nav/>
-                        
                         {routes}
                     </div>
                 </HashRouter>

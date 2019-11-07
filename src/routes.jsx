@@ -20,4 +20,4 @@ export default (
     </Switch>
 )
 
-//todo need to add a route at the end of dashboard for dashzoom
+//todo need to add a route at the end of dashboard for dashzoom i would map and use data base to just grab it by trade_item my_items (it an id maybe rename it.)

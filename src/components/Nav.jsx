@@ -31,9 +31,7 @@ class Nav extends React.Component {
                         </Link>
                         <Link to='/profile'><button>profile</button></Link>
                         <Link to='/'> <button>logout</button></Link>
-
-                </div>
-
+                    </div>
                 )}
             </div>
         )
