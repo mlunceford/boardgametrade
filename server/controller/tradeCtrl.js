@@ -8,8 +8,8 @@ module.exports = {
     },
     addTrade: (req, res) => {
         const db = req.app.get('db') // connnecting database
-        const { name, description, img, cost } = req.body //descructuring
-        db.add_trade(name, description, img, cost)
-          .then(trades => res.status(200).send('worked'))//grabbing my db get_trade.sql file
+        const { name, description, imgurl, cost } = req.body //descructuring
+        db.add_trade(name, description, imgurl, cost)
+          .then(trades => res.status(200).send(trades))//grabbing my db get_trade.sql file
     }
 }

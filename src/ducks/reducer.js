@@ -2,9 +2,11 @@ import axios from 'axios'
 
 const initialState = {
     user: {},
-    trades: []
+    trades: [],
+    addTradeRedux: {}
 }
 
+const ADD_TRADE = 'ADD_TRADE' //action types
 const UPDATE_USER = 'UPDATE_USER'; //action types
 const GET_TRADES = 'GET_TRADES'; //action types
 
@@ -17,6 +19,13 @@ export const getTrades = () => {
             console.log('ckeck res', response) 
             return response.data
         })
+    }
+}
+
+export function addTrade(addObj){
+    return {
+        type: ADD_TRADE,
+        payload: addObj
     }
 }
 
@@ -35,6 +44,8 @@ export default function reducer(state = initialState, action) {
             return { ...state, user: payload }
         case GET_TRADES + '_FULFILLED':
             return {...state, trades: payload}
+        case ADD_TRADE + '_FULFILLED':
+            return {...state, addTradeRedux: payload }
         default:
             return state;
     }

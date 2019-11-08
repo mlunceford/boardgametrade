@@ -1,6 +1,6 @@
 import React from 'react'
 import './Nav.scss'
-import {HashRouter, withRouter} from 'react-router-dom'
+import { withRouter} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 
