@@ -17,13 +17,17 @@ class AddTrade extends React.Component {
         }
     }
 
-    handleSubmit = () => {
-        const { name, description, imgurl, cost } = this.state
+    handleSubmit = (e) =>  {
+        e.preventDefault()
+         console.log('hit handle submit funct')
+
+        const { name, description, imgurl, cost} = this.state
         axios.post('/api/trade', {
             name: name,
             description: description,
             imgurl: imgurl,
-            cost: cost
+            cost: cost,
+            user_id: this.props.store.reducer.user.user_id
         }).then(res => { console.log('hit handleSubmit')
             this.props.addTrade(res.data);
             this.props.history.push('/dashboard');
@@ -44,7 +48,9 @@ class AddTrade extends React.Component {
     render() {
         console.log(this.props)
         return (
+            
             <div className="AddTrade">
+                <div className="fixedScss"></div>
                 <form className='addForm' action="">
                     <input type="text"
                         name='name'
@@ -73,7 +79,7 @@ class AddTrade extends React.Component {
                     ></textarea>
                     <button type='submit'
                         name='submit'
-                        onClick={this.handleSubmit}
+                        onClick={e => this.handleSubmit(e)}
                     >Submit</button>
                 </form>
             </div>
@@ -81,9 +87,9 @@ class AddTrade extends React.Component {
     }
 }
 const mapStateToProps = stateFromRedux => {
-    const { addTradeRedux } = stateFromRedux;
+    const { addTradeRedux, user, trades } = stateFromRedux;
     return {
-        addTradeRedux
+        store: stateFromRedux
     }
 }
 export default withRouter(connect(mapStateToProps, { addTrade })(AddTrade));

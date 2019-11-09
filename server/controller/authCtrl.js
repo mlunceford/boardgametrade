@@ -15,7 +15,7 @@ module.exports = { //!register works hitting both status codes
 
         let newUser = await db.register([username, hash]);
         console.log(newUser)
-        return res.status(200).send('Registered')
+        return res.status(200).send(newUser[0])
     },
     login: async (req, res) => {
         const db = req.app.get('db')
@@ -30,9 +30,8 @@ module.exports = { //!register works hitting both status codes
         if(authenticated){
             delete foundUser.password;
 
-            res.status(200).send('Logged in')
+            res.status(200).send('logged in')
         } else {
-            alert('Wrong Password')
             res.status(401).send('Password is bad')
         }
     },

@@ -6,10 +6,11 @@ module.exports = {
             .catch(err => console.log(err))
             
     },
-    addTrade: (req, res) => {
+    addTrade: (req, res) => { console.log('hit add tra')
         const db = req.app.get('db') // connnecting database
-        const { name, description, imgurl, cost } = req.body //descructuring
-        db.add_trade(name, description, imgurl, cost)
+        const { name, description, imgurl, cost, user_id } = req.body //descructuring
+        console.log(req.body)
+        db.add_trade(name, description, imgurl, cost, user_id)
           .then(trades => res.status(200).send(trades))//grabbing my db get_trade.sql file
     }
 }

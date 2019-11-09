@@ -21,6 +21,7 @@ class Dashboard extends React.Component {
     //todo need to make a route to DashZoom when clicking on an item
 
     render(){
+        console.log(this.props)
         console.log(this.props.trades.trades)
         console.log(this.state)
         let list = this.props.trades.trades.map((element, index)=> {
@@ -28,6 +29,7 @@ class Dashboard extends React.Component {
         })
         return(
             <div className="Dashboard">
+                <div className="fixedScss"></div>
                 {list}
             </div>
         )

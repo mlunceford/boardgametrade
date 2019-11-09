@@ -11,6 +11,7 @@ class Profile extends React.Component {
     render(){
         return(
             <div className="Profile">
+                <div className="fixedScss"></div>
                 Profile
             </div>
         )

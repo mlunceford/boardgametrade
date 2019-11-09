@@ -1,7 +1,7 @@
 @import 'var';
 
 .Dashboard{
-    padding: 5px 3px;
+    padding: 5px 0;
     @include flex(flex, space-around, center, row);
     
     flex-wrap: wrap;
@@ -10,4 +10,9 @@
     color: $green;
     box-sizing: border-box;
     
+}
+
+.fixedScss{
+    height: 10vh;
+    width: 100vw;
 }

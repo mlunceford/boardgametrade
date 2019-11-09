@@ -11,6 +11,8 @@ class Interested extends React.Component {
     render(){
         return(
             <div className="Interested">
+                <div className="fixedScss"></div>
+
                 Interested
             </div>
         )

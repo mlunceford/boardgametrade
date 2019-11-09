@@ -11,6 +11,7 @@ class MyTrade extends React.Component {
     render(){
         return(
             <div className="MyTrade">
+                <div className="fixedScss"></div>
                 MyTrade
             </div>
         )

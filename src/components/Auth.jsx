@@ -15,23 +15,25 @@ class Auth extends React.Component {
     }
     handleRegister = () => {
         // console.log(this.state.username, this.state.password) 
+        // alert('Username already exists')
         axios.post('/auth/register', {
             username: this.state.username,
             password: this.state.password
-        }).then(res => { //console.log('hit')
+        }).then(res => { console.log('hit register')
             this.props.updateUser(res.data);
             this.props.history.push('/dashboard');
             this.setState({ //this is setting htem back to blank even tho wer going to dashboard.
                 username: '',
                 password: ''
             })
+            
         })
     }
     handleLogin = () => {
         axios.post("/auth/login", {
           username: this.state.username,
           password: this.state.password
-        }).then(res => { //console.log('hit')
+        }).then(res => { //console.log('hit login')
           this.props.updateUser(res.data);
           this.props.history.push("/dashboard");
           this.setState({

@@ -14,11 +14,14 @@ class TradeList extends React.Component {
                 <div  className="imgBox"> <img className='tradeImg' src={this.props.listTrade.img} alt="No Img"/> </div>
                 <div className="textBox">
                     <div>
-                    {this.props.listTrade.name}
+                        {this.props.listTrade.name}
                     </div>
                     <div>
-                    {this.props.listTrade.cost}
+                        {this.props.listTrade.cost}
                     </div>
+                </div>
+                <div>
+                    {this.props.listTrade.description}
                 </div>
     
                 {/* {this.props.listTrade.description}  */}

@@ -40,7 +40,7 @@ export default function reducer(state = initialState, action) {
     const { type, payload } = action;
     console.log(action)
     switch (type) {
-        case UPDATE_USER + '_FULFILLED':
+        case UPDATE_USER:
             return { ...state, user: payload }
         case GET_TRADES + '_FULFILLED':
             return {...state, trades: payload}
