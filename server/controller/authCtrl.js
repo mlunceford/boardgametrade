@@ -8,14 +8,15 @@ module.exports = { //!register works hitting both status codes
         console.log(foundUser)
         console.log(username,password)
         if (foundUser[0]) {
-            return res.status(405).send('Username already exists')
+            return res.status(405).send('Username already exists')            .alert(`Username: ${this.state.username} already exists.` )
+
         }
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
 
         let newUser = await db.register([username, hash]);
         console.log(newUser)
-        return res.status(200).send(newUser[0])
+        return res.status(200).send(newUser[0]) // this is what lucas helped with to actully send the newUser back and not just a string.
     },
     login: async (req, res) => {
         const db = req.app.get('db')

@@ -28,20 +28,30 @@ class Auth extends React.Component {
             })
             
         })
+        .catch(err => console.log(err, alert(`${this.state.username} already exists`)),
+        this.setState({
+            username: '',
+            password: ''
+        })
+        )  // this took forever to understand so sad.
+    
     }
     handleLogin = () => {
         axios.post("/auth/login", {
           username: this.state.username,
           password: this.state.password
         }).then(res => { //console.log('hit login')
-          this.props.updateUser(res.data);
-          this.props.history.push("/dashboard");
-          this.setState({
-            username: "",
-            password: ""
-          });
-        });
-      };
+            this.setState({
+                username: "",
+                password: ""
+            });
+            this.props.updateUser(res.data);
+            this.props.history.push("/dashboard");
+        
+        })
+        .catch(err => console.log(err, alert(`Username: ${this.state.username}Password Incorrect`)),
+        this.setState({username: '', password: ''}))
+    };
     handleInput = (e) => {
         this.setState({ //* name is an attribute that you always use.
             [e.target.name]: e.target.value
@@ -55,12 +65,11 @@ class Auth extends React.Component {
         // }
     render(){
         // console.log(this.state.username, this.state.password) 
-        
         return(
             <div className="Auth">
                 
                 <div className="authTitle">
-                Board Game Trade
+                    Board Game Trade
                 </div>
                 <img className='authImg' src="https://static.thenounproject.com/png/138946-200.png" alt="bglogo"/>
                 <div className="authBox">

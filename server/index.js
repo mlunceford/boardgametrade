@@ -28,6 +28,9 @@ app.use(session({
 //todo db endpoints
 app.get('/api/trade', tradeCtrl.getTrades)
 app.post('/api/trade', tradeCtrl.addTrade)
+app.get('/api/trade/:item_id', tradeCtrl.getSaveTradeItemId)
+//todo below is bad screw queries
+app.get(`api/mytrade/id?`, tradeCtrl.getMyTradesByUserId)
 // auth endpoints
 app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)

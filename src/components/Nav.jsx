@@ -36,7 +36,7 @@ class Nav extends React.Component {
                             </Link>
                             <h1>Board Game Trade</h1>
                             <Link to='/addtrade'>
-                                <button>+Tr</button>
+                                <button>Add Trade</button>
                             </Link>
                             <Link to='/interested'>
                                 <button>Saved</button>
@@ -45,7 +45,7 @@ class Nav extends React.Component {
                                 <button>My Trade</button>
                             </Link>
                             <Link to='/profile'>
-                                <button>pro</button>
+                                <button>Profile</button>
                             </Link>
                             <Link to='/'>
                                 <img className='navImg' src="https://icon-library.net/images/end-icon/end-icon-12.jpg" alt="logout"/>
@@ -59,12 +59,13 @@ class Nav extends React.Component {
                         
                         {/* phonable dropdown down here */}
                         <div className="dropdown hide-dropdown" ref={this.dropdown}>
+                            <Link to='Dashboard'><div className="dropdown-links">Dashboard</div> </Link>
                             <Link to='/profile'>
                                 <div className="dropdown-links">Profile</div>
                             </Link>
-                            <Link to='/addtrade'><div className="dropdown-links">+ Trade</div></Link>
-                            <Link to='/mytrades'><div className="dropdown-links">My Trades</div></Link>
-                            <Link to='/interested'><div className="dropdown-links">Saved Trades</div></Link>
+                            <Link to='/addtrade'><div className="dropdown-links">Add Trade</div></Link>
+                            <Link to='/mytrade'><div className="dropdown-links">My Trades</div></Link>
+                            <Link to='/savetrade'><div className="dropdown-links">Saved Trades</div></Link>
                             <Link to='/'><div className="dropdown-links">Logout</div></Link>
                         </div>
                     </div>

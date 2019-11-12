@@ -13,6 +13,7 @@ class Profile extends React.Component {
             <div className="Profile">
                 <div className="fixedScss"></div>
                 Profile
+                <div className="profileName"></div>
             </div>
         )
     }

@@ -1,0 +1,14 @@
+@import "var";
+
+.SaveTrade {
+  height: 90vh;
+  background: $black;
+  color: white;
+  .title{
+      @include flex(flex, center, center, row);
+      height: 10vh;
+      width: 100vw;
+      background: $black;
+      font-size: 50px;
+  }
+}

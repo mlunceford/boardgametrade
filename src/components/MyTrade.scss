@@ -1,7 +1,13 @@
-@import 'var';
+@import "var";
 
-.MyTrade{
-    height: 90vh;
-    background: $black;
-    color: white;
+.MyTrade {
+  height: 90vh;
+  background: $black;
+  color: white;
+
+  .title {
+    height: 10vh;
+    font-size: 50px;
+    @include flex(flex, center, center, row)
+  }
 }
