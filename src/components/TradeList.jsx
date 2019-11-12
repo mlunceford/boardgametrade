@@ -1,21 +1,29 @@
 import React from 'react'
 import './TradeList.scss'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import { getSaveTradeByItemId } from '../ducks/reducer'
+import {withRouter} from 'react-router-dom'
+
 
 
 class TradeList extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            item_id: []
         }
     }
-    
-    render(){
+    click = ()=> {
+        this.props.getSaveTradeByItemId(this.props.listTrade.item_id)
+        this.props.history.push('/savetrade')
+    }
+
+    render() {
+        console.log(this.props)
         // console.log(this.props.listTrade.item_id)
         return (
-            <div className='listTrade' onClick={this.props.saveTradeClick}  >
-                <div  className="imgBox"> <img className='tradeImg' src={this.props.listTrade.img} alt="No Img"/> </div>
+            <div className='listTrade' onClick={() =>this.click()}  >
+                <div className="imgBox"> <img className='tradeImg' src={this.props.listTrade.img} alt="No Img" /> </div>
                 <div className="textBox">
                     <div>{this.props.listTrade.name}</div>
                     <div>
@@ -25,10 +33,13 @@ class TradeList extends React.Component {
                 <div>
                     {this.props.listTrade.description}
                 </div>
-    
+
                 {/* {this.props.listTrade.description}  */}
             </div>
         )
     }
 }
-export default TradeList;
+const mapStateToProps = (reduxstate) => {
+    return { reduxstate }
+}
+export default withRouter(connect(mapStateToProps, { getSaveTradeByItemId })(TradeList));

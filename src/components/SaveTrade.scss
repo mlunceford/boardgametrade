@@ -1,7 +1,10 @@
 @import "var";
 
 .SaveTrade {
-  height: 90vh;
+  padding: 5px 0;
+  @include flex(flex, space-around, center, row);
+  flex-wrap: wrap;
+  height: auto;
   background: $black;
   color: white;
   .title{

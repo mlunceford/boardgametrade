@@ -5,7 +5,7 @@ const initialState = {
     trades: [],
     addTradeRedux: {},
     myTrades: [],
-    saveTradeItemId: []
+    saveTradeItem: []
 }
 
 const ADD_TRADE = 'ADD_TRADE' //action types
@@ -13,6 +13,16 @@ const UPDATE_USER = 'UPDATE_USER'; //action types
 const GET_TRADES = 'GET_TRADES'; //action types
 const GET_MY_TRADES_BY_ID = 'GET_MY_TRADES_BY_ID';
 const GET_SAVE_TRADE_ITEM_ID = 'GET_SAVE_TRADE_ITEM_ID'
+const DELETE_SAVE = 'DELETE_SAVE'
+
+export const deleteSave = id => {
+    console.log('hit')
+    // let data = axios.delete(`/api/trade/${id}`).then(res => res.data);
+    return {
+        type: DELETE_SAVE,
+        payload: id
+    }
+}
 export const getTrades = () => {
     console.log('hit')
     return {
@@ -25,15 +35,18 @@ export const getTrades = () => {
     }
 }
 
-export const getSaveTradeByItemId = () => {
+export const getSaveTradeByItemId = (id) => {
     console.log('hit getsvaetradebyitemid')
+
     return {
         type: GET_SAVE_TRADE_ITEM_ID,
-        payload: axios.get('/api/trade/:item_id')
-            .then(res => {
-                console.log('check getsavetradbyitem res',res)
-                return res.data
-            })
+    //     payload: axios.get('/api/trade/:item_id')
+    //         .then(res => {
+    //             console.log('check getsavetradbyitem res',res)
+
+    //             return res.data
+    //         })
+    payload:id
     }
 }
 
@@ -75,8 +88,23 @@ export default function reducer(state = initialState, action) {
             return { ...state, addTradeRedux: payload }
         case GET_MY_TRADES_BY_ID + '_FULFILLED':
             return { ...state, myTrades: payload }
-        case GET_SAVE_TRADE_ITEM_ID + '_FULFILLED':
-            return { ...state, saveTradeItemId: payload }
+        case GET_SAVE_TRADE_ITEM_ID:
+                // trades: []
+                let correct = state.trades.filter((el,i)=>{
+                    if(payload === el.item_id){
+                        return el
+                    }
+                })
+                console.log('correct',correct)
+            return { ...state, saveTradeItem: [...state.saveTradeItem ,correct[0]] }
+        case DELETE_SAVE:
+            let deleted = state.trades.filter((el,i) => {
+                if(payload === el.item_id){
+                    return;
+                }
+            })
+            console.log('deleted', deleted)
+            // return {}
         default:
             return state;
     }

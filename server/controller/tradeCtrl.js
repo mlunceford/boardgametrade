@@ -19,6 +19,8 @@ module.exports = {
         let trades = await db.get_save_trade_item_id(+req.params.item_id) // the plus forces it to be a number  this is grabbing my db get_trades.sql file
         res.status(200).send(trades)
     },
+
+    // this doesnt work
     getMyTradesByUserId: (req, res) => {
         const db = req.app.get('db')
         //todo might need this below?????
@@ -28,5 +30,4 @@ module.exports = {
         .then(myTrade => res.status(200).send(myTrade))
         .catch(err => console.log(err,'mytrade error'))
     },
-
 }

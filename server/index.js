@@ -38,6 +38,7 @@ app.post('/auth/logout', authCtrl.logout)
 // app.post('/auth/getuser', authCtrl.getuser)
 
 //todo main ctrl endpoints
+// app.delete('/api/trade/:item_id', tradeCtrl.deleteTrade) //this was looking at nodb review1
 
 
 

@@ -1,0 +1,21 @@
+@import 'var';
+
+.SaveTradeMap {
+    background: $green;
+    color: black;
+    @include flex(flex, space-between, center, column);
+    border-radius: 5px;
+    // height: 48vw; this is so it doesnt have a fixed height for the img.
+    width: 48vw;
+    border: solid grey;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0;
+    button{
+        background: $grey;
+    }
+    .saveTextBox{
+        @include flex(flex, space-between, center, row);
+        width: 95%;
+    }
+}

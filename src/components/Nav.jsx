@@ -38,11 +38,11 @@ class Nav extends React.Component {
                             <Link to='/addtrade'>
                                 <button>Add Trade</button>
                             </Link>
-                            <Link to='/interested'>
-                                <button>Saved</button>
+                            <Link to='/savetrade'>
+                                <button>Saved Trades</button>
                             </Link>
                             <Link to='/mytrade'>
-                                <button>My Trade</button>
+                                <button>My Trades</button>
                             </Link>
                             <Link to='/profile'>
                                 <button>Profile</button>
