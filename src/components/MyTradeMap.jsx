@@ -17,8 +17,6 @@ class MyTradeMap extends React.Component {
                 <div>
                     {this.props.MyTradeMap.description}
                 </div>
-    
-                {/* {this.props.MyTradeMap.description}  */}
             </div>
         )
     }

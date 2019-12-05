@@ -149,6 +149,11 @@ textarea{
     }
 }
 // Nav
+.Nav{
+    a{
+        text-decoration: none;
+    }
+}
 .Nav, .linkbox {
     position: fixed;
     background: $grey;
@@ -287,6 +292,10 @@ text-decoration: none;
     box-sizing: border-box;
     padding: 5px;
     margin: 5px 0;
+    .listBox{
+        margin: 5px;
+        font-size: 15px;
+    }
 }
 .imgBox  {
     width: 95%;
@@ -299,4 +308,34 @@ text-decoration: none;
 .textBox{
     @include flex(flex, space-between, center, row);
     width: 100%;
+    font-size: 20px;
+}
+.SaveTradeMap  {
+    background: $green;
+    color: black;
+    @include flex(flex, space-between, center, column);
+    border-radius: 5px;
+    // height: 48vw; this is so it doesnt have a fixed height for the img.
+    width: 48vw;
+    width: 95vw;
+    border: solid grey;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0;
+    .saveTextBox{
+        margin: 5px;
+        font-size: 15px;
+    }
+    input{
+        background: $black;
+        // width: 48vw;
+    }
+    button{
+        background: $grey;
+    }
+    .saveBtn{
+        width: 90%;
+        @include flex(flex, space-around, center, row)
+        margin: 5px;
+    }
 }

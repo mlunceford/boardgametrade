@@ -56,8 +56,6 @@ class SaveTradeMap extends React.Component {
         </div>
         <div className="saveTextBox">
           {this.props.saveTradeMaps.description}
-          <button onClick={() => this.editTradeBtn(this.props.saveTradeMaps.item_id)}>Edit</button>
-          <button onClick={() => this.props.deleteTrade(this.props.saveTradeMaps.item_id)}>Delete</button>
         </div>
         <input
           name="name"
@@ -82,7 +80,11 @@ class SaveTradeMap extends React.Component {
           value={this.description}
           placeholder='Edit description'
           onChange={e => this.handleInputs(e)}
-        />        
+        />   
+        <div className='saveBtn'>
+          <button onClick={() => this.editTradeBtn(this.props.saveTradeMaps.item_id)}>Edit</button>
+          <button onClick={() => this.props.deleteTrade(this.props.saveTradeMaps.item_id)}>Delete</button>
+        </div>     
       </div>
     );
   }
