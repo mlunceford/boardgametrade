@@ -13,16 +13,25 @@ const UPDATE_USER = 'UPDATE_USER'; //action types
 const GET_TRADES = 'GET_TRADES'; //action types
 const GET_MY_TRADES_BY_ID = 'GET_MY_TRADES_BY_ID';
 const GET_SAVE_TRADE_ITEM_ID = 'GET_SAVE_TRADE_ITEM_ID'
-const DELETE_SAVE = 'DELETE_SAVE'
+const EDIT_TRADE = 'EDIT_TRADE'
+const DELETE_TRADE = 'DELETE_TRADE'
 
-export const deleteSave = id => {
-    console.log('hit')
-    // let data = axios.delete(`/api/trade/${id}`).then(res => res.data);
+
+export const deleteTrade = item_id => {
+    let data = axios.delete(`/api/trade/${item_id}`).then(res => res.data);
     return {
-        type: DELETE_SAVE,
-        payload: id
+      type: DELETE_TRADE,
+      payload: data
+    };
+  };
+export const editTrade = (name, description, img, cost, item_id) => {
+    let data = axios.put(`/api/trade/${item_id}`, {name, description, img, cost ,}).then(res => res.data);
+    return{ 
+        type: EDIT_TRADE,
+        payload: data
     }
 }
+
 export const getTrades = () => {
     console.log('hit')
     return {
@@ -97,14 +106,10 @@ export default function reducer(state = initialState, action) {
                 })
                 console.log('correct',correct)
             return { ...state, saveTradeItem: [...state.saveTradeItem ,correct[0]] }
-        case DELETE_SAVE:
-            let deleted = state.trades.filter((el,i) => {
-                if(payload === el.item_id){
-                    return;
-                }
-            })
-            console.log('deleted', deleted)
-            // return {}
+        case DELETE_TRADE + "_FULFILLED":
+            return { trade: payload };
+        case EDIT_TRADE + "_FULFILLED":
+            return { trade: payload };
         default:
             return state;
     }

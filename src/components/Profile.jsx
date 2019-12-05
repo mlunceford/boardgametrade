@@ -1,5 +1,6 @@
 import React from 'react'
-import './Profile.scss'
+import {connect} from 'react-redux'
+
 
 class Profile extends React.Component {
     constructor(props){
@@ -8,7 +9,9 @@ class Profile extends React.Component {
 
         }
     }
+    
     render(){
+        console.log(this.props)
         return(
             <div className="Profile">
                 <div className="fixedScss"></div>
@@ -18,4 +21,7 @@ class Profile extends React.Component {
         )
     }
 }
-export default Profile;
+const mapStateToProps=(reduxstate) => {
+    return {reduxstate}
+}
+export default connect(mapStateToProps)(Profile);

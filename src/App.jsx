@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.scss';
+import './reset.scss'
+import './App.scss'
 import routes from './routes'
 import {Provider} from 'react-redux'
 import {HashRouter} from 'react-router-dom'
@@ -24,7 +25,6 @@ class App extends React.Component{
                         {routes}
                     </div>
                 </HashRouter>
-
             </Provider>
         );
     }

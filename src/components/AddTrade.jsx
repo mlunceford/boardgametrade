@@ -1,5 +1,4 @@
 import React from 'react'
-import './AddTrade.scss'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { addTrade } from '../ducks/reducer'

@@ -16,7 +16,7 @@ export default (
         <Route path='/savetrade' component={SaveTrade}/>
         <Route path='/profile' component={Profile}/>
         <Route path='/mytrade' component={MyTrade}/>
-        <Route path= '/dashzoom' component={DashZoom}/>
+        <Route path='/dashzoom' component={DashZoom}/>
     </Switch>
 )
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import './Dashboard.scss'
 import {connect} from 'react-redux'
 import {getTrades} from '../ducks/reducer'
 import {getSaveTradeByItemId} from '../ducks/reducer'

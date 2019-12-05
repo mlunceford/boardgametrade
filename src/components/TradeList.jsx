@@ -1,10 +1,8 @@
 import React from 'react'
-import './TradeList.scss'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { getSaveTradeByItemId } from '../ducks/reducer'
 import {withRouter} from 'react-router-dom'
-
 
 
 class TradeList extends React.Component {
@@ -19,7 +17,7 @@ class TradeList extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         // console.log(this.props.listTrade.item_id)
         return (
             <div className='listTrade' onClick={() =>this.click()}  >

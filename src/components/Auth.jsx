@@ -1,5 +1,4 @@
 import React from 'react'
-import './Auth.scss'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {updateUser} from '../ducks/reducer'
@@ -21,7 +20,7 @@ class Auth extends React.Component {
             password: this.state.password
         }).then(res => { console.log('hit register')
             this.props.updateUser(res.data);
-            this.props.history.push('/dashboard');
+            this.props.history.push('/profile');
             this.setState({ //this is setting htem back to blank even tho wer going to dashboard.
                 username: '',
                 password: ''

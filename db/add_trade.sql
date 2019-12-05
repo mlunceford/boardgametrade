@@ -1,5 +1,3 @@
-
-
 insert into trade_item (
     name,
     description,

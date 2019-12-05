@@ -40,3 +40,9 @@ create table messages (
     foreign key(id) references rooms(id)
 );
 
+
+-- i dont know how to use join so annoyuing
+select * from trade_users
+join trade_item
+on trade_users.user_id = trade_item.user_id;
+

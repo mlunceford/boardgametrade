@@ -1,5 +1,4 @@
 import React from 'react'
-import './DashZoom.scss'
 
 class DashZoom extends React.Component {
     constructor(props){

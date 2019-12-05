@@ -4,7 +4,7 @@ const massive = require('massive') //connects server to db
 const session = require('express-session')
 const{SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 const authCtrl = require('./controller/authCtrl')
-const tradeCtrl = require('./controller/tradeCtrl')
+const tc = require('./controller/tradeCtrl')
 //this gives us access to use middleware and some other crap
 const app = express();
 //parser so we can convert json to javascript. and allows us to send json.
@@ -26,19 +26,20 @@ app.use(session({
 }))
 
 //todo db endpoints
-app.get('/api/trade', tradeCtrl.getTrades)
-app.post('/api/trade', tradeCtrl.addTrade)
-app.get('/api/trade/:item_id', tradeCtrl.getSaveTradeItemId)
-//todo below is bad screw queries
-app.get(`api/mytrade/id?`, tradeCtrl.getMyTradesByUserId)
+app.get('/api/trade', tc.getTrades)
+app.post('/api/trade', tc.addTrade)
+app.get('/api/trade/:item_id', tc.getSaveTradeItemId)
+app.put('/api/trade/:item_id', tc.editTradeInfo)
+app.delete('/api/trade/:item_id', tc.deleteTrade) //this was looking at nodb review1
+
+app.get(`/api/mytrade/:user_id`, tc.getMyTradeUserId)
 // auth endpoints
 app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)
 app.post('/auth/logout', authCtrl.logout)
-// app.post('/auth/getuser', authCtrl.getuser)
+app.get('/auth/getuser', authCtrl.getUser)
 
 //todo main ctrl endpoints
-// app.delete('/api/trade/:item_id', tradeCtrl.deleteTrade) //this was looking at nodb review1
 
 
 

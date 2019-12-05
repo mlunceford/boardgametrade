@@ -1,6 +1,4 @@
 import React from 'react'
-import './MyTradeMap.scss'
-
 
 class MyTradeMap extends React.Component {
     constructor(props){

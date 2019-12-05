@@ -1,5 +1,4 @@
 import React from 'react'
-import './MyTrade.scss'
 import {connect} from 'react-redux'
 import {getMyTrades} from '../ducks/reducer'
 import MyTradeMap from './MyTradeMap'
