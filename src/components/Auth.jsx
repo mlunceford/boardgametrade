@@ -63,6 +63,7 @@ class Auth extends React.Component {
         //   })
         // }
     render(){
+        console.log(this.props)
         // console.log(this.state.username, this.state.password) 
         return(
             <div className="Auth">

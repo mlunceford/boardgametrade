@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {updateUser} from '../ducks/reducer'
 
+//? need to get 
 
 class Profile extends React.Component {
     constructor(props){
@@ -9,14 +11,15 @@ class Profile extends React.Component {
 
         }
     }
-    
+    getUserData =()=> {
+
+    }
     render(){
         console.log(this.props)
         return(
             <div className="Profile">
                 <div className="fixedScss"></div>
-                Profile
-                <div className="profileName"></div>
+                <div className="profileName">Profile</div>
             </div>
         )
     }
@@ -24,4 +27,4 @@ class Profile extends React.Component {
 const mapStateToProps=(reduxstate) => {
     return {reduxstate}
 }
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps, {updateUser})(Profile);

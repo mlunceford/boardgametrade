@@ -1,341 +1,334 @@
-@import 'var.scss';
+@import "var.scss";
 
-body{
-    text-decoration: none;
-    font-family: $font;
-    background: $black;
+body {
+  text-decoration: none;
+  font-family: $font;
+  background: $black;
 }
-.App{
-    text-decoration: none;
+.App {
+  text-decoration: none;
 }
-button{
-    border: none;
-    border-radius: 10px;
-    background: $green;
-    color: black;
-    font-size: 21px;
-    height: 35px;
-    transition-duration: 1s;
-    font-family: $font;
-
+button {
+  border: none;
+  border-radius: 10px;
+  background: $green;
+  color: black;
+  font-size: 21px;
+  height: 35px;
+  transition-duration: 1s;
+  font-family: $font;
 }
-button:hover{
-    cursor: pointer;
-    background: $hover;
-    font-family: $font;
-    
+button:hover {
+  cursor: pointer;
+  background: $hover;
+  font-family: $font;
 }
-input{
-    background: $green;
-    color: black;
-    border-radius: 10px;
-    border: solid grey;
-    font-size: 25px;
-    font-family: $font;
-    width: 300px;
+input {
+  background: $green;
+  color: black;
+  border-radius: 10px;
+  border: solid grey;
+  font-size: 25px;
+  font-family: $font;
+  width: 300px;
 }
-textarea{
-    background: $green;
-    color: black;
-    border-radius: 10px;
-    border: solid grey;
-    font-size: 25px;   
-    font-family: $font;
-    width: 300px;
+textarea {
+  background: $green;
+  color: black;
+  border-radius: 10px;
+  border: solid grey;
+  font-size: 25px;
+  font-family: $font;
+  width: 300px;
 }
-::placeholder{
-    text-decoration: underline;
-    font-family: $font;
-    color: white;
+::placeholder {
+  text-decoration: underline;
+  font-family: $font;
+  color: white;
 }
 // addTrade
 
-.AddTrade{
-    height: 90vh;
-    background: $black;
-    color: white;
+.AddTrade {
+  height: 90vh;
+  background: $black;
+  color: white;
 }
-.addForm{
-    height: 100%;
-    // width: 100vw;
-    @include flex(flex, space-around, center, column);
-    box-sizing: border-box;
-    padding: 5px 0;
+.addForm {
+  height: 100%;
+  // width: 100vw;
+  @include flex(flex, space-around, center, column);
+  box-sizing: border-box;
+  padding: 5px 0;
 }
 // Auth
-.Auth{
-    font-family: $font;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background:$black;
-    color: $green;
-    
+.Auth {
+  font-family: $font;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: $black;
+  color: $green;
 }
-.authTitle{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    box-sizing: border-box;
-    margin: 20px;
+.authTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  box-sizing: border-box;
+  margin: 20px;
 }
-.authImg{
-    background:$green;
-    height: 40vh;
-    width: auto;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
+.authImg {
+  background: $green;
+  height: 40vh;
+  width: auto;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
 }
-.authBox{
-    color: $green;
-    height: 50vh;
-    width: auto;
-    background: $black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 30px;
+.authBox {
+  color: $green;
+  height: 50vh;
+  width: auto;
+  background: $black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 30px;
 }
 
-
-.btnBox{
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    
+.btnBox {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
 }
 // Dashboard
 
-.Dashboard{
-    padding: 5px 0;
-    @include flex(flex, space-around, center, row);
-    
-    flex-wrap: wrap;
-    height: auto;
-    background: $black;
-    color: $green;
-    box-sizing: border-box;
-    
+.Dashboard {
+  padding: 5px 0;
+  @include flex(flex, space-around, center, row);
+  flex-wrap: wrap;
+  height: auto;
+  background: $black;
+  color: $green;
+  box-sizing: border-box;
 }
-
-.fixedScss{
-    height: 10vh;
-    width: 100vw;
+.fixedScss {
+  height: 10vh;
+  width: 100vw;
 }
 // DashZoom
-
-.DashZoom{
-    height: 90vh;
-    background: $black;
-    color: white;
+.DashZoom {
+  height: 90vh;
+  background: $black;
+  color: white;
 }
 // MyTrade
-
 .MyTrade {
-    height: 90vh;
-    background: $black;
-    color: white;
-
-    .title {
-        height: 10vh;
-        font-size: 50px;
-        @include flex(flex, center, center, row)
-    }
+  height: 90vh;
+  background: $black;
+  color: white;
+  .title {
+    height: 10vh;
+    font-size: 35px;
+    @include flex(flex, center, center, row);
+  }
 }
 // Nav
-.Nav{
-    a{
-        text-decoration: none;
-    }
+.Nav {
+  a {
+    text-decoration: none;
+  }
 }
-.Nav, .linkbox {
-    position: fixed;
-    background: $grey;
-    height: 10vh;
-    width: 100vw;
-    box-sizing: border-box;
-    padding: 0 5px;
-    @include flex(flex, space-between, center, row)
+.linkbox {
+  position: fixed;
+  background: $grey;
+  height: 10vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 5px;
+  @include flex(flex, space-between, center, row);
 }
-.navImg{
-    background: transparent;
-    max-width: 8vh;
-    border-radius: 5px;
-    height: auto;
-    box-sizing: border-box;
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
+.navImg {
+  background: transparent;
+  max-width: 8vh;
+  border-radius: 5px;
+  height: auto;
+  box-sizing: border-box;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
 }
 // .navBox{
 //     width: 50vw;
 //     @include flex(flex, space-around, center, ro)
 // }
-.navImg:hover{
-background: $hover;
+.navImg:hover {
+  background: $hover;
 }
-h1{
-    font-size: 33px;
+h1 {
+  font-size: 33px;
 }
 
-//sids css code
+//sid css code
 
-.hide-animation{
-animation-name: hide;
-animation-duration: .5s;
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
+.hide-animation {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-@keyframes hide{
-0% {
+@keyframes hide {
+  0% {
     height: 250px;
-}
-100% {
+  }
+  100% {
     height: 0px;
+  }
 }
+.show-animation {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-.show-animation{
-animation-name: show;
-animation-duration: .5s;
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
-}
-@keyframes show{
-0% {
+@keyframes show {
+  0% {
     height: 0px;
-}
-100% {
+  }
+  100% {
     height: auto;
-}
-}
-
-.dropdown{
-display: flex;
-overflow: hidden;
-position: fixed;
-top: 10vh;
-right: 0;
-// background-image: linear-gradient(white, whitesmoke);
-width: 100%;
-color:black;
-flex-direction: column;
-justify-content: center;
-align-content: center;
-align-items: baseline;
-/* height: 700px; */
-// box-shadow: 0px 8px 10px 0px #000000;
-// z-index: 2;
-}
-.dropdown-links{
-width: 100vw;
-height: 40px;
-font-size: 30px;
-border: solid black;
-background: $green;
-color: black;
-text-decoration: none;
-@include flex(flex, center,center, row)
-    
-}
-@media(min-width: 800px){
-    .hamburgerIcon, .dropdown .hamBar{
-        display: none;
-    }
-}
-@media(max-width: 801px){
-    .linkbox{
-    display: none;
-    }
+  }
 }
 
-.hide-dropdown{
+.dropdown {
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  // background-image: linear-gradient(white, whitesmoke);
+  width: 100%;
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  /* height: 700px; */
+  // box-shadow: 0px 8px 10px 0px #000000;
+  // z-index: 2;
+}
+.dropdown-links {
+  width: 100vw;
+  height: 40px;
+  font-size: 30px;
+  border: solid black;
+  background: $green;
+  color: black;
+  text-decoration: none;
+  @include flex(flex, center, center, row);
+}
+@media (min-width: 800px) {
+  .hamburgerIcon,
+  .dropdown .hamBar {
     display: none;
+  }
+}
+@media (max-width: 801px) {
+  .linkbox {
+    display: none;
+  }
+}
+
+.hide-dropdown {
+  display: none;
 }
 // Profile
-.Profile{
-    height: 90vh;
-    background: $black;
-    color: white;
+.Profile {
+  height: 90vh;
+  background: $black;
+  color: white;
+
+  .profileName {
+    margin-top: 10px;
+    @include flex(flex, center, center, row);
+    font-size: 35px;
+  }
 }
 // SaveTrade
 
 .SaveTrade {
-    padding: 5px 0;
-    @include flex(flex, space-around, center, row);
-    flex-wrap: wrap;
-    height: auto;
+  padding: 5px 0;
+  @include flex(flex, space-around, center, row);
+  flex-wrap: wrap;
+  height: auto;
+  background: $black;
+  color: white;
+  .title {
+    @include flex(flex, center, center, row);
+    height: 10vh;
+    width: 100vw;
     background: $black;
-    color: white;
-    .title{
-        @include flex(flex, center, center, row);
-        height: 10vh;
-        width: 100vw;
-        background: $black;
-        font-size: 50px;
-    }
+    font-size: 35px;
+  }
 }
 // TradeList
 
 .listTrade {
-    background: $green;
-    color: black;
-    @include flex(flex, space-between, center, column);
-    border-radius: 5px;
-    // height: 48vw; this is so it doesnt have a fixed height for the img.
-    width: 48vw;
-    border: solid grey;
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 5px 0;
-    .listBox{
-        margin: 5px;
-        font-size: 15px;
-    }
+  background: $green;
+  color: black;
+  @include flex(flex, space-between, center, column);
+  border-radius: 5px;
+  // height: 48vw; this is so it doesnt have a fixed height for the img.
+  width: 48vw;
+  border: solid grey;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 5px 0;
+  .listBox {
+    margin: 5px;
+    font-size: 15px;
+  }
 }
-.imgBox  {
-    width: 95%;
-    
+.imgBox {
+  width: 95%;
 }
-.tradeImg{
-    width: 100%;
-    border-radius: 10px;
+.tradeImg {
+  width: 100%;
+  border-radius: 10px;
 }
-.textBox{
-    @include flex(flex, space-between, center, row);
-    width: 100%;
-    font-size: 20px;
+.textBox {
+  @include flex(flex, space-between, center, row);
+  width: 100%;
+  font-size: 20px;
 }
-.SaveTradeMap  {
-    background: $green;
-    color: black;
-    @include flex(flex, space-between, center, column);
-    border-radius: 5px;
-    // height: 48vw; this is so it doesnt have a fixed height for the img.
-    width: 48vw;
-    width: 95vw;
-    border: solid grey;
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 5px 0;
-    .saveTextBox{
-        margin: 5px;
-        font-size: 15px;
-    }
-    input{
-        background: $black;
-        // width: 48vw;
-    }
-    button{
-        background: $grey;
-    }
-    .saveBtn{
-        width: 90%;
-        @include flex(flex, space-around, center, row)
-        margin: 5px;
-    }
+.SaveTradeMap {
+  background: $green;
+  color: black;
+  @include flex(flex, space-between, center, column);
+  border-radius: 5px;
+  // height: 48vw; this is so it doesnt have a fixed height for the img.
+  // width: 48vw;
+  width: 95vw;
+  border: solid grey;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 5px 0;
+  .saveTextBox {
+    margin: 5px;
+    font-size: 15px;
+  }
+  input {
+    background: $black;
+    // width: 48vw;
+  }
+  button {
+    background: $grey;
+  }
+  .saveBtn {
+    width: 90%;
+    @include flex(flex, space-around, center, row) margin: 5px;
+  }
 }
